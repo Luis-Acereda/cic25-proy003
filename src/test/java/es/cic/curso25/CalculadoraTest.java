@@ -2,8 +2,6 @@ package es.cic.curso25;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class CalculadoraTest {
@@ -73,19 +71,5 @@ public class CalculadoraTest {
 
         // Verifico que salta la excepción tras dividir por 0
         assertThrows(ArithmeticException.class, () -> cut.dividir(0));        
-    }
-
-    @Disabled
-    @Test
-    public void testDividendoEsCero() {
-        // Preparo
-        Calculadora cut = new Calculadora();
-
-        cut.dividir(2);
-        double valorActual = cut.getTotal();
-        assertEquals(4, valorActual, 0.000001);
-
-        // Verifico que salta la excepción tras dividir por 0
-        //assertThrows(ArithmeticException.class, () -> cut.dividir(0));        
     }
 }
