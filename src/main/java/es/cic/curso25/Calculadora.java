@@ -14,4 +14,16 @@ public class Calculadora extends Object {
     public void restar(double valor) {
         total -= valor;
     }
+
+    public void mutiplicar(double valor) {
+        total *= valor;
+    }
+
+    public void dividir(double valor) {
+        if(valor == 0){
+            throw new ArithmeticException("No se puede dividir por cero"); 
+        } else {
+            total /= valor;
+        }
+    }
 }
