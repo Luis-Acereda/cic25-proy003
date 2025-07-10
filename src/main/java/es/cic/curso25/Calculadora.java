@@ -1,6 +1,7 @@
 package es.cic.curso25;
 
 public class Calculadora extends Object {
+
     private double total;
 
     public double getTotal() {
@@ -25,5 +26,9 @@ public class Calculadora extends Object {
         } else {
             total /= valor;
         }
+    }
+
+    public void limpiar(){
+        total = 0;
     }
 }

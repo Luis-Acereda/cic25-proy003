@@ -72,4 +72,18 @@ public class CalculadoraTest {
         // Verifico que salta la excepción tras dividir por 0
         assertThrows(ArithmeticException.class, () -> cut.dividir(0));        
     }
+
+    @Test
+    void testLimpiar() {
+        // Preparo
+        Calculadora cut = new Calculadora();
+        cut.sumar(40);
+
+        // Ejecuto
+        cut.limpiar();
+
+        // Verifico
+        double valorActual = cut.getTotal();
+        assertEquals(0, valorActual);
+    }
 }
