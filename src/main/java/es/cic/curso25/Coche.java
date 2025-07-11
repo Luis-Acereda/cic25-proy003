@@ -32,7 +32,11 @@ public class Coche {
 
         velocidad = (int) Math.round(calculadora.getTotal()); // getTotal() devuelve un double y lo paso a int.
 
-        return velocidad;
+        if (velocidad > 300){
+            return 300;
+        } else {
+            return velocidad;
+        }
     }
 
     public int frenar(int decrementoVelocidad){

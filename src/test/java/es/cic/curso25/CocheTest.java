@@ -24,6 +24,14 @@ public class CocheTest {
     }
 
     @Test
+    void testAcelerarEnExceso() {
+        int velocidadFinal;
+        velocidadFinal = cut.acelerar(310);
+
+        assertEquals(300, velocidadFinal);
+    }
+
+    @Test
     void testFrenar() {
         int velocidadFinal;
         cut.acelerar(34);
